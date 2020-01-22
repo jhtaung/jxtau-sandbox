@@ -133,7 +133,7 @@ const Layout = props => {
               component={RouterLink}
               key={key}
               selected={isSelected(prop.path)}
-              to={prop.path}>
+              to={process.env.PUBLIC_URL + prop.path}>
               <ListItemIcon>{prop.icon}</ListItemIcon>
               <ListItemText primary={prop.title} />
             </ListItem>

@@ -1,4 +1,5 @@
 {
+  "globals": { "process": "readonly" },
   "parser": "babel-eslint",
   "rules": {
     "comma-dangle": 0,
@@ -44,7 +45,5 @@
     "jsx": true,
     "experimentalObjectRestSpread": true
   },
-  "plugins": [
-    "react"
-  ]
+  "plugins": ["react"]
 }

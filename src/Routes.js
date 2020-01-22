@@ -12,20 +12,21 @@ import Tables from './views/Tables';
 import NotFound from './views/NotFound';
 
 const Routes = () => {
+  const getPath = path => process.env.PUBLIC_URL + path;
   return (
     <Router>
       <Switch>
-        <Route exact path="/"><Layout content={<Dashboard />} /></Route>
-        <Route exact path="/charts"><Layout content={<Charts />} /></Route>
-        <Route exact path="/dashboard"><Layout content={<Dashboard />} /></Route>
-        <Route exact path="/login"><Layout content={<Login />} /></Route>
-        <Route exact path="/manga"><Layout content={<Manga />} /></Route>
-        <Route exact path="/profile"><Layout content={<Profile />} /></Route>
-        <Route exact path="/register"><Layout content={<Register />} /></Route>
-        <Route exact path="/tables"><Layout content={<Tables />} /></Route>
+        <Route exact path={getPath('/')}><Layout content={<Dashboard />} /></Route>
+        <Route exact path={getPath('/charts')}><Layout content={<Charts />} /></Route>
+        <Route exact path={getPath('/dashboard')}><Layout content={<Dashboard />} /></Route>
+        <Route exact path={getPath('/login')}><Layout content={<Login />} /></Route>
+        <Route exact path={getPath('/manga')}><Layout content={<Manga />} /></Route>
+        <Route exact path={getPath('/profile')}><Layout content={<Profile />} /></Route>
+        <Route exact path={getPath('/register')}><Layout content={<Register />} /></Route>
+        <Route exact path={getPath('/tables')}><Layout content={<Tables />} /></Route>
 
-        <Route exact path="/not-found"><Layout content={<NotFound />} /></Route>
-        <Redirect to="/not-found" />
+        <Route exact path={getPath('/not-found')}><Layout content={<NotFound />} /></Route>
+        <Redirect to={getPath('/not-found')} />
       </Switch>
     </Router>
   );
