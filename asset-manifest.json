@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.js": "/jxtau-sandbox/static/js/main.dccd48ab.chunk.js",
-    "main.js.map": "/jxtau-sandbox/static/js/main.dccd48ab.chunk.js.map",
+    "main.js": "/jxtau-sandbox/static/js/main.1b9e38c1.chunk.js",
+    "main.js.map": "/jxtau-sandbox/static/js/main.1b9e38c1.chunk.js.map",
     "runtime-main.js": "/jxtau-sandbox/static/js/runtime-main.a6cd8d04.js",
     "runtime-main.js.map": "/jxtau-sandbox/static/js/runtime-main.a6cd8d04.js.map",
     "static/js/2.db7d580e.chunk.js": "/jxtau-sandbox/static/js/2.db7d580e.chunk.js",
     "static/js/2.db7d580e.chunk.js.map": "/jxtau-sandbox/static/js/2.db7d580e.chunk.js.map",
     "index.html": "/jxtau-sandbox/index.html",
-    "precache-manifest.1abdec086cd88f4c3eeb15524ea2d9d7.js": "/jxtau-sandbox/precache-manifest.1abdec086cd88f4c3eeb15524ea2d9d7.js",
+    "precache-manifest.181ff97539ff433a1130254272302897.js": "/jxtau-sandbox/precache-manifest.181ff97539ff433a1130254272302897.js",
     "service-worker.js": "/jxtau-sandbox/service-worker.js"
   },
   "entrypoints": [
     "static/js/runtime-main.a6cd8d04.js",
     "static/js/2.db7d580e.chunk.js",
-    "static/js/main.dccd48ab.chunk.js"
+    "static/js/main.1b9e38c1.chunk.js"
   ]
 }
