@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "732c7b29eb229d24ec960ed2ffc5dd5a",
+    "revision": "d3254e6069922eb77d0ffb7d596d8f12",
     "url": "/jxtau-sandbox/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/jxtau-sandbox/static/js/2.db7d580e.chunk.js"
   },
   {
-    "revision": "7a8ba802538c97a93b5e",
-    "url": "/jxtau-sandbox/static/js/main.c68b3061.chunk.js"
+    "revision": "126410a7e44e274a3d48",
+    "url": "/jxtau-sandbox/static/js/main.63137cba.chunk.js"
   },
   {
     "revision": "64ce262d09f2ffaa6779",
