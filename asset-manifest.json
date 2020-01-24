@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/jxtau-sandbox/static/js/main.944b80ac.chunk.js",
-    "main.js.map": "/jxtau-sandbox/static/js/main.944b80ac.chunk.js.map",
+    "main.js": "/jxtau-sandbox/static/js/main.345c5e2a.chunk.js",
+    "main.js.map": "/jxtau-sandbox/static/js/main.345c5e2a.chunk.js.map",
     "runtime-main.js": "/jxtau-sandbox/static/js/runtime-main.7358c8e3.js",
     "runtime-main.js.map": "/jxtau-sandbox/static/js/runtime-main.7358c8e3.js.map",
-    "static/js/2.1de57651.chunk.js": "/jxtau-sandbox/static/js/2.1de57651.chunk.js",
-    "static/js/2.1de57651.chunk.js.map": "/jxtau-sandbox/static/js/2.1de57651.chunk.js.map",
+    "static/js/2.13c544db.chunk.js": "/jxtau-sandbox/static/js/2.13c544db.chunk.js",
+    "static/js/2.13c544db.chunk.js.map": "/jxtau-sandbox/static/js/2.13c544db.chunk.js.map",
     "index.html": "/jxtau-sandbox/index.html",
-    "precache-manifest.9e1e48998796bb7a48c48d025b974b50.js": "/jxtau-sandbox/precache-manifest.9e1e48998796bb7a48c48d025b974b50.js",
+    "precache-manifest.ad12f72b98d1e77de8a697c8d0145b7b.js": "/jxtau-sandbox/precache-manifest.ad12f72b98d1e77de8a697c8d0145b7b.js",
     "service-worker.js": "/jxtau-sandbox/service-worker.js",
-    "static/js/2.1de57651.chunk.js.LICENSE": "/jxtau-sandbox/static/js/2.1de57651.chunk.js.LICENSE"
+    "static/js/2.13c544db.chunk.js.LICENSE": "/jxtau-sandbox/static/js/2.13c544db.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.7358c8e3.js",
-    "static/js/2.1de57651.chunk.js",
-    "static/js/main.944b80ac.chunk.js"
+    "static/js/2.13c544db.chunk.js",
+    "static/js/main.345c5e2a.chunk.js"
   ]
 }
