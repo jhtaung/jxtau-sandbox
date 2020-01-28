@@ -21,6 +21,7 @@ import {
 import {
   AccountCircle as AccountCircleIcon,
   Assessment as AssessmentIcon,
+  CalendarToday as CalendarIcon,
   Dashboard as DashboardIcon,
   ErrorOutline as ErrorOutlineIcon,
   Face as FaceIcon,
@@ -93,6 +94,7 @@ const Layout = props => {
     { title: 'Profile', path: '/profile', icon: <FaceIcon /> },
     { title: 'Login', path: '/login', icon: <AccountCircleIcon /> },
     { title: 'Register', path: '/register', icon: <LockIcon /> },
+    { title: 'Calendar', path: '/calendar', icon: <CalendarIcon /> },
     { title: 'Tables', path: '/tables', icon: <TableChartIcon /> },
     { title: 'Charts', path: '/charts', icon: <AssessmentIcon /> },
     { title: 'Manga', path: '/manga', icon: <WorkIcon /> },

@@ -4,7 +4,7 @@ import React, { useRef, useState } from 'react';
 import MaterialTable from 'material-table';
 import { Divider } from '@material-ui/core';
 
-const Tables = () => {
+const Table = () => {
   const columns = [
     { title: 'Name', field: 'name' },
     { title: 'Surname', field: 'surname' },
@@ -81,4 +81,4 @@ const Tables = () => {
   );
 };
 
-export default Tables;
+export default Table;

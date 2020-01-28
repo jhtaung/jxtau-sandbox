@@ -7,7 +7,7 @@ import { green } from '@material-ui/core/colors';
 import { Avatar, Card, CardContent, Grid, Typography } from '@material-ui/core';
 import { AttachMoney as AttachMoneyIcon } from '@material-ui/icons';
 
-import WorkTime from '../components/WorkTime';
+import WorkTime from '../../components/WorkTime';
 
 const useStyles = makeStyles(theme => ({
   root: {
