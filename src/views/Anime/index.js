@@ -13,12 +13,23 @@ const useStyles = makeStyles(theme => ({
 
 const Anime = () => {
   const classes = useStyles();
-  const { handleAniQuery } = useAnime();
+  const { doAniQuery } = useAnime();
+
+  // TODO reducer, context
+  const [state, setState] = React.useState({ result: [] });
+
+  const handleQuery = async () => {
+    const result = await doAniQuery();
+    if (result.success) {
+      setState({ result: result.response.data.data.Page.media });
+    }
+  };
+
   return (
     <Paper className={classes.paperRoot}>
       <Typography variant="h4">Manga</Typography>
       <Divider className={classes.dividerRoot} />
-      <Button color="primary" onClick={() => handleAniQuery()} variant="contained">
+      <Button color="primary" onClick={() => handleQuery()} variant="contained">
         Anilist Query
       </Button>
       <Divider className={classes.dividerRoot} />
@@ -29,6 +40,8 @@ const Anime = () => {
           release dates for latest anime and manga,
         </li>
       </ul>
+      <Divider className={classes.dividerRoot} />
+      {state.result.map((value, index) => <p key={index}>{value.title.english}</p>)}
     </Paper>
   );
 };
