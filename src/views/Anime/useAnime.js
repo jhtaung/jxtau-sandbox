@@ -1,7 +1,7 @@
 import axios from 'axios';
 const useAnime = () => {
   const createQuery = variables => {
-    variables = { page: 1, perPage: 10, ...variables };
+    variables = { page: 1, perPage: 100, ...variables };
     const query = `
       query ($page: Int, $perPage: Int, $search: String) {
         Page (page: $page, perPage: $perPage) {
@@ -17,6 +17,9 @@ const useAnime = () => {
             title {
               english
             }
+            coverImage {
+              medium
+            }
           }
         }
       }
@@ -24,12 +27,13 @@ const useAnime = () => {
     return { query, variables };
   };
 
-  const doAniQuery = async () => {
+  const doAniQuery = async search => {
     let result = { success: false, response: {} };
     const request = {
       method: 'post',
       url: 'https://graphql.anilist.co',
-      data: createQuery({ search: 'One Piece' })
+      // data: createQuery({ search: 'One Piece' })
+      data: createQuery({ search: search })
     };
     try {
       const response = await axios(request);

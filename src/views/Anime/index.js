@@ -1,14 +1,37 @@
 import React from 'react';
+import {
+  Divider,
+  IconButton,
+  InputBase,
+  Paper,
+  Typography
+} from '@material-ui/core';
+import { Search as SearchIcon } from '@material-ui/icons';
 import { makeStyles } from '@material-ui/core/styles';
-import { Button, Divider, Paper, Typography } from '@material-ui/core';
 import useAnime from './useAnime';
 
 const useStyles = makeStyles(theme => ({
-  paperRoot: {
-    padding: theme.spacing(2),
-    marginTop: theme.spacing(2)
+  paperRoot: { padding: theme.spacing(2), marginTop: theme.spacing(2) },
+  dividerRoot: { margin: theme.spacing(2) },
+  textFieldRoot: { height: '10px' },
+  root: {
+    alignItems: 'center',
+    display: 'flex',
+    marginTop: theme.spacing(2),
+    padding: '2px 4px',
+    width: 400
   },
-  dividerRoot: { margin: theme.spacing(2) }
+  input: {
+    marginLeft: theme.spacing(1),
+    flex: 1
+  },
+  iconButton: {
+    padding: 10
+  },
+  divider: {
+    height: 28,
+    margin: 4
+  }
 }));
 
 const Anime = () => {
@@ -16,33 +39,53 @@ const Anime = () => {
   const { doAniQuery } = useAnime();
 
   // TODO reducer, context
-  const [state, setState] = React.useState({ result: [] });
+  const [state, setState] = React.useState({ search: '', result: [] });
 
-  const handleQuery = async () => {
-    const result = await doAniQuery();
+  const handleChange = (e, key) => {
+    e.preventDefault();
+    setState({ ...state, [key]: e.target.value });
+  };
+
+  const handleQuery = async e => {
+    e.preventDefault();
+    const result = await doAniQuery(state.search);
     if (result.success) {
-      setState({ result: result.response.data.data.Page.media });
+      setState({ ...state, result: result.response.data.data.Page.media });
     }
   };
 
   return (
-    <Paper className={classes.paperRoot}>
-      <Typography variant="h4">Manga</Typography>
-      <Divider className={classes.dividerRoot} />
-      <Button color="primary" onClick={() => handleQuery()} variant="contained">
-        Anilist Query
-      </Button>
-      <Divider className={classes.dividerRoot} />
-      <ul>
-        <li>Show Top 5 Anime / Show List of Anime</li>
-        <li>
-          columns: Name, release date, seasons/episodes
-          release dates for latest anime and manga,
-        </li>
-      </ul>
-      <Divider className={classes.dividerRoot} />
-      {state.result.map((value, index) => <p key={index}>{value.title.english}</p>)}
-    </Paper>
+    <form onSubmit={handleQuery}>
+      <Paper className={classes.paperRoot}>
+        <Typography variant="h4">Manga</Typography>
+        <Divider className={classes.dividerRoot} />
+        <ul>
+          <li>Show Top 5 Anime / Show List of Anime</li>
+          <li>
+            columns: Name, release date, seasons/episodes release dates for
+            latest anime and manga,
+          </li>
+        </ul>
+      </Paper>
+      <Paper className={classes.root} component="form">
+        <InputBase
+          className={classes.input}
+          onChange={e => handleChange(e, 'search')}
+          placeholder="Search Anime" />
+        <Divider className={classes.divider} orientation="vertical" />
+        <IconButton
+          aria-label="search"
+          className={classes.iconButton}
+          type="submit">
+          <SearchIcon />
+        </IconButton>
+      </Paper>
+      <Paper className={classes.paperRoot}>
+        {state.result.map((value, index) => (
+          <p key={index}>{index} . {value.title.english}</p>
+        ))}
+      </Paper>
+    </form>
   );
 };
 export default Anime;
